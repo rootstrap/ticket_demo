@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ticket_demo/domain/repositories/product_repository_impl.dart';
+import 'package:ticket_demo/data/repositories/product_repository_impl.dart';
 import 'package:ticket_demo/presentation/pages/home/all_products/all_products_bloc.dart';
 import 'package:ticket_demo/presentation/pages/home/all_products/all_products_form.dart';
 import 'package:ticket_demo/presentation/utils/bloc_provider.dart';

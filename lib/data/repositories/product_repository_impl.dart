@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ticket_demo/data/entities/product_entity.dart';
-import 'package:ticket_demo/data/repositories/product_repository.dart';
+import 'package:ticket_demo/domain/repositories/product_repository.dart';
 
 class ProductRepositoryImpl implements ProductRepository {
   final products = FirebaseFirestore.instance.collection("products");

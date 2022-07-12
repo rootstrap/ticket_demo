@@ -1,5 +1,5 @@
 import 'package:ticket_demo/data/entities/product_entity.dart';
-import 'package:ticket_demo/data/repositories/product_repository.dart';
+import 'package:ticket_demo/domain/repositories/product_repository.dart';
 
 class NewProductBloc {
   final ProductRepository _productRepository;
