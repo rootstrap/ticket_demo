@@ -10,7 +10,8 @@ class BlocProvider<T> extends InheritedWidget {
   }) : super(key: key, child: child);
 
   static T of<T>(BuildContext context) {
-    return context.findAncestorWidgetOfExactType<BlocProvider<T>>()!.bloc;
+    final provider = context.dependOnInheritedWidgetOfExactType<BlocProvider<T>>()!;
+    return provider.bloc;
   }
 
   @override

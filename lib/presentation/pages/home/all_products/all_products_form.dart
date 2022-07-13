@@ -16,10 +16,11 @@ class AllProductForm extends StatefulWidget {
 }
 
 class _AllProductFormState extends State<AllProductForm> {
+
   @override
   void initState() {
     super.initState();
-    context.read<AllProductsBloc>().fetchProducts();
+    Future.microtask(() => context.read<AllProductsBloc>().fetchProducts());
   }
 
   @override
@@ -48,5 +49,11 @@ class _AllProductFormState extends State<AllProductForm> {
         child: const Text("+"),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    context.read<AllProductsBloc>().dispose();
+    super.dispose();
   }
 }

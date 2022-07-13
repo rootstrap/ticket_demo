@@ -4,7 +4,7 @@ import 'package:ticket_demo/data/entities/product_entity.dart';
 import 'package:ticket_demo/domain/repositories/product_repository.dart';
 import 'package:ticket_demo/presentation/resource.dart';
 
-class AllProductsBloc {
+class AllProductsBloc{
   final ProductRepository _productRepository;
 
   AllProductsBloc(this._productRepository);
@@ -22,5 +22,9 @@ class AllProductsBloc {
     }, onError: (e) {
       sinkProducts.add(Resource.error(error: e.toString()));
     });
+  }
+
+  void dispose() {
+    _productsController.close();
   }
 }

@@ -1,7 +1,7 @@
 import 'package:ticket_demo/data/entities/product_entity.dart';
 import 'package:ticket_demo/domain/repositories/product_repository.dart';
 
-class NewProductBloc {
+class NewProductBloc{
   final ProductRepository _productRepository;
 
   NewProductBloc(this._productRepository);
