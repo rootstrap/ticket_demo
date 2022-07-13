@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:ticket_demo/data/repositories/product_repository_impl.dart';
 import 'package:ticket_demo/presentation/pages/home/all_products/all_products_bloc.dart';
 import 'package:ticket_demo/presentation/pages/home/all_products/all_products_form.dart';
-import 'package:ticket_demo/presentation/utils/bloc_provider.dart';
 
 class AllProductsPage extends StatelessWidget {
   const AllProductsPage({Key? key}) : super(key: key);
@@ -10,9 +10,14 @@ class AllProductsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: BlocProvider<AllProductsBloc>(
-        bloc: AllProductsBloc(ProductRepositoryImpl()),
+      child: Provider<AllProductsBloc>(
+        create: (BuildContext context) {
+          return AllProductsBloc(ProductRepositoryImpl());
+        },
         child: const AllProductForm(),
+        dispose: (context, bloc) {
+          bloc.dispose();
+        },
       ),
     );
   }

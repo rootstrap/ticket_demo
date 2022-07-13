@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:ticket_demo/data/entities/product_entity.dart';
 import 'package:ticket_demo/presentation/pages/home/all_products/all_products_bloc.dart';
 import 'package:ticket_demo/presentation/pages/home/all_products/widgets/loading_widget.dart';
@@ -6,7 +7,6 @@ import 'package:ticket_demo/presentation/pages/home/all_products/widgets/product
 import 'package:ticket_demo/presentation/pages/home/all_products/widgets/retry_widget.dart';
 import 'package:ticket_demo/presentation/resource.dart';
 import 'package:ticket_demo/presentation/routes/route_constants.dart';
-import 'package:ticket_demo/presentation/utils/bloc_provider.dart';
 
 class AllProductForm extends StatefulWidget {
   const AllProductForm({Key? key}) : super(key: key);
@@ -16,7 +16,6 @@ class AllProductForm extends StatefulWidget {
 }
 
 class _AllProductFormState extends State<AllProductForm> {
-
   @override
   void initState() {
     super.initState();
@@ -49,11 +48,5 @@ class _AllProductFormState extends State<AllProductForm> {
         child: const Text("+"),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    context.read<AllProductsBloc>().dispose();
-    super.dispose();
   }
 }
