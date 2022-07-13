@@ -8,23 +8,23 @@ class DefaultFirebaseConfig {
     if (kIsWeb) {
       // Web
       return const FirebaseOptions(
-          appId: '1:99063270151:android:9ef27a9f12c216636293a2',
-          apiKey: 'AIzaSyDYF9DGRRv5NSxcjUPlJ_hFhmf8oepdhnA',
-          projectId: 'ticketdemo-c2ee0',
-          messagingSenderId: '99063270151');
+          appId: '',
+          apiKey: '',
+          projectId: '',
+          messagingSenderId: '');
     } else if (Platform.isIOS || Platform.isMacOS) {
       return const FirebaseOptions(
-          appId: '1:99063270151:ios:a96caa5c130654766293a2',
-          apiKey: 'AIzaSyArxKBatGxmzUhQbGb7anCEpp51Aqd',
-          projectId: 'ticketdemo-c2ee0',
-          messagingSenderId: '99063270151');
+          appId: '',
+          apiKey: '',
+          projectId: '',
+          messagingSenderId: '');
     } else {
       // Android
       return const FirebaseOptions(
-        appId: '1:99063270151:android:9ef27a9f12c216636293a2',
-        apiKey: 'AIzaSyDYF9DGRRv5NSxcjUPlJ_hFhmf8oepdhnA',
-        projectId: 'ticketdemo-c2ee0',
-        messagingSenderId: '99063270151',
+        appId: '',
+        apiKey: '',
+        projectId: '',
+        messagingSenderId: '',
       );
     }
   }
